@@ -15,7 +15,7 @@ echo "@edge http://nl.alpinelinux.org/alpine/latest-stable/community" >> /etc/ap
 RUN mix local.hex --force && \
     mix local.rebar --force
 
-WORKDIR /opt/app
+WORKDIR /app
 
 ENV MIX_ENV=prod
 
