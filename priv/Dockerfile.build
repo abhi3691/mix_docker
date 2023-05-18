@@ -17,7 +17,7 @@ RUN mix local.hex --force && \
 
 WORKDIR /app
 
-ENV MIX_ENV=prod mix
+ENV MIX_ENV=prod 
 
 # Cache elixir deps
 RUN mkdir config
@@ -27,4 +27,4 @@ RUN mix do deps.get, deps.compile
 
 COPY . .
 
-RUN mix release
+RUN  MIX_ENV=prod mix release 
